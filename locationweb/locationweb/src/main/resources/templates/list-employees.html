@@ -1,0 +1,54 @@
+<html lang="en" >
+
+<head>
+    <title>List and Insert Database</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous" />
+</head>
+
+<body>
+
+<div class="container">
+
+    <h3>List Location Database</h3>
+
+    <hr/>
+
+    <table class="table table-bordered table-striped">
+
+        <a href="#" th:href="@{/showInsert}">
+            <input type="button" value="Insert Location">
+        </a>
+
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Type</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr th:each="aliAbiler: ${ali}">
+            <td th:text="${aliAbiler.id}" />
+            <td th:text="${aliAbiler.code}" />
+            <td th:text="${aliAbiler.name}" />
+            <td th:text="${aliAbiler.type}" />
+        </tr>
+        </tbody>
+
+
+
+    </table>
+</div>
+
+
+
+
+</body>
+
+</html>
